@@ -8,4 +8,10 @@ describe('App', () => {
     expect(screen.getByText('Vite + React')).toBeInTheDocument()
     expect(screen.getByRole('button')).toBeInTheDocument()
   })
+
+  it('should fail intentionally', () => {
+    render(<App />)
+    // Este test fallará porque estamos buscando un texto que no existe
+    expect(screen.getByText('Este texto no existe')).toBeInTheDocument()
+  })
 }) 
