@@ -11,7 +11,8 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
-    "check-deps": "npm-check-updates"
+    "check-deps": "npm-check-updates",
+    "validate": "npm run typecheck && echo '\n=== LINTING ===\n' && npm run lint && echo '\n=== TESTING ===\n' && npm run test"
   },
   "dependencies": {
     "react": "^18.2.0",
